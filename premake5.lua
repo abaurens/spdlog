@@ -1,9 +1,10 @@
 -- spdlog
 project "spdlog"
-  kind "StaticLib"
+  --kind "StaticLib"
+  kind "None"
   language "C++"
   cppdialect "C++20"
-  staticruntime "on"
+  --staticruntime "on"
   systemversion "latest"
 
 
@@ -16,22 +17,22 @@ project "spdlog"
     "%{IncludeDir.spdlog}"
   }
 
-  defines {
-    "SPDLOG_COMPILED_LIB",
-    "SPDLOG_WCHAR_TO_UTF8_SUPPORT",
-    "SPDLOG_UTF8_TO_WCHAR_CONSOLE",
-    "SPDLOG_WCHAR_FILENAMES"
-  }
+  --defines {
+  --  "SPDLOG_COMPILED_LIB",
+  --  "SPDLOG_WCHAR_TO_UTF8_SUPPORT",
+  --  "SPDLOG_UTF8_TO_WCHAR_CONSOLE",
+  --  "SPDLOG_WCHAR_FILENAMES"
+  --}
 
   files {
     "premake5.lua",
-
+    
     "include/**.h",
 
-    "src/spdlog.cpp",
-    "src/stdout_sinks.cpp",
-    "src/color_sinks.cpp",
-    "src/file_sinks.cpp",
-    "src/async.cpp",
-    "src/cfg.cpp"
+    --"src/spdlog.cpp",
+    --"src/stdout_sinks.cpp",
+    --"src/color_sinks.cpp",
+    --"src/file_sinks.cpp",
+    --"src/async.cpp",
+    --"src/cfg.cpp"
   }
